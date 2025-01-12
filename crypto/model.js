@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const cryptoSchema = new mongoose.Schema({
     id : {
-        type : Number,
+        type : String,
         required : true
     },
     name : {
@@ -22,6 +22,6 @@ const cryptoSchema = new mongoose.Schema({
         required : true
     },
 
-});
+},{ timestamps: true });
 
 module.exports = mongoose.model('Crypto', cryptoSchema);
